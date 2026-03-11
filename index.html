@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alaa Hamada shoman | Full Stack Developer</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<style>
+/* Hero Section */
+.hero{
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 160px 0;
+  text-align: center;
+  color: white;
+}
+.profile-pic{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 4px solid white;
+}
+.profile-pic img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+/* About */
+.about-text{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+}
+/* Skills Circles */
+.skills-circle{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skills-circle:hover{
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+/* Projects Circles */
+.project-circle{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-circle img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.project-circle:hover{
+  transform: translateY(-10px) scale(1.05);
+  box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Alaa Hamada</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="profile-pic">
+      <img src="lol.jpg" alt="Alaa Hamada">
+    </div>
+    <h1 class="fw-bold display-4">Alaa Hamada Mohamed</h1>
+    <p class="lead">Full Stack Developer | PHP • Smarty • Bootstrap • JavaScript</p>
+    <a href="https://github.com/alaashoman12 " class="btn btn-light m-2"><i class="fab fa-github"></i> GitHub</a>
+    <a href="cv.pdf" class="btn btn-primary m-2"><i class="fas fa-download"></i> Download CV</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="container py-5 text-center">
+  <h2 class="mb-4">About Me</h2>
+  <p class="about-text">
+    Full Stack Web Developer with 2 years experience building modern web applications using PHP,Smarty,React, JavaScript, and Bootstrap. Graduate from Suez Canal University – Ismailia.
+  </p>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5">Skills</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <div class="skills-circle" style="background:#ff6b6b;">HTML</div>
+      <div class="skills-circle" style="background:#f7b731;">CSS</div>
+      <div class="skills-circle" style="background:#1dd1a1;">JavaScript</div>
+      <div class="skills-circle" style="background:#54a0ff;">React</div>
+      <div class="skills-circle" style="background:#5f27cd;">Bootstrap</div>
+      <div class="skills-circle" style="background:#10ac84;">PHP</div>
+      <div class="skills-circle" style="background:#576574;">Smarty</div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 text-center">
+  <div class="container">
+    <h2 class="mb-5">Projects</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+      <div class="project-circle">
+        <a href="https://github.com/yourusername" target="_blank">
+          <img src="https://via.placeholder.com/180" alt="Project 1">
+        </a>
+      </div>
+      <div class="project-circle">
+        <a href="https://github.com/yourusername" target="_blank">
+          <img src="https://via.placeholder.com/180" alt="Project 2">
+        </a>
+      </div>
+      <div class="project-circle">
+        <a href="https://github.com/yourusername" target="_blank">
+          <img src="https://via.placeholder.com/180" alt="Project 3">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-dark text-white py-5 text-center">
+  <h2>Contact Me</h2>
+  <p>Email: loloshoman111@email.com | Phone: 01090557014</p>
+  <div class="social-icons">
+    <a href="https://github.com/yourusername" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+    <a href="https://linkedin.com/in/yourusername" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3">
+© 2026 Alaa Hamada
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
