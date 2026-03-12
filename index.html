@@ -3,173 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alaa Hamada shoman | Full Stack Developer</title>
+<title>Alaa Shoman | Full Stack Developer</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* Hero Section */
-.hero{
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  padding: 160px 0;
-  text-align: center;
-  color: white;
-}
-.profile-pic{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 20px;
-  border: 4px solid white;
-}
-.profile-pic img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-}
-/* About */
-.about-text{
-  max-width:700px;
-  margin:auto;
-  font-size:18px;
-  padding: 20px;
-  border-radius: 15px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(5px);
-}
-/* Skills Circles */
-.skills-circle{
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.skills-circle:hover{
-  transform: translateY(-10px) scale(1.1);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-}
-/* Projects Circles */
-.project-circle{
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow:0 8px 25px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.project-circle img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-.project-circle:hover{
-  transform: translateY(-10px) scale(1.05);
-  box-shadow:0 15px 35px rgba(0,0,0,0.4);
-}
+body{font-family:'Roboto',sans-serif;background:#0a0a0a;color:#fff;scroll-behavior:smooth;overflow-x:hidden}
+.navbar{background:#010101;border-bottom:1px solid #333}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(24,24,24,0.85),rgba(0,0,0,0.85)), url('background.jpg') center/cover no-repeat;z-index:0;filter:brightness(0.5)}
+.hero h1{font-size:4rem;font-weight:700;position:relative;z-index:1;animation:fadeInDown 1s ease-in-out}
+.hero h3{position:relative;z-index:1;animation:fadeInUp 1s ease-in-out}
+.hero p{position:relative;z-index:1;animation:fadeInUp 1.5s ease-in-out}
+.highlight{color:#0ff}
+.section{padding:100px 0;position:relative}
+.card{background:#111;border:1px solid #222;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer}
+.card:hover{transform:translateY(-10px);box-shadow:0 10px 30px rgba(0,255,255,0.5)}
+.skill-bar{height:14px;border-radius:7px}
+.footer{background:#010101;padding:40px;text-align:center;border-top:1px solid #333}
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-30px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(30px)}100%{opacity:1;transform:translateY(0)}}
+.progress{background:#222!important}
+.particles{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hero-buttons a{margin:5px;transition:all 0.3s;position:relative;z-index:1}
+.hero-buttons a:hover{transform:translateY(-5px);box-shadow:0 5px 20px rgba(0,255,255,0.5)}
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Alaa Hamada</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
+<div class="particles" id="particles-js"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">Alaa Shoman</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="profile-pic">
-      <img src="lol.jpg" alt="Alaa Hamada">
-    </div>
-    <h1 class="fw-bold display-4">Alaa Hamada Mohamed</h1>
-    <p class="lead">Full Stack Developer | PHP • Smarty • Bootstrap • JavaScript</p>
-    <a href="https://github.com/alaashoman12 " class="btn btn-light m-2"><i class="fab fa-github"></i> GitHub</a>
-    <a href="cv.pdf" class="btn btn-primary m-2"><i class="fas fa-download"></i> Download CV</a>
-  </div>
+<section class="hero container position-relative">
+<div class="row align-items-center w-100 position-relative" style="z-index:1">
+<div class="col-lg-6">
+<h1>Hi, I'm <span class="highlight">Alaa Shoman</span></h1>
+<h3 class="mb-3">Full Stack Developer</h3>
+<p>Building modern, scalable, and visually stunning web applications.</p>
+<div class="hero-buttons">
+<a href="#projects" class="btn btn-info"><i class="fas fa-briefcase me-1"></i> View Projects</a>
+<a href="#contact" class="btn btn-outline-light"><i class="fas fa-envelope me-1"></i> Contact Me</a>
+<a href="https://github.com/alaashoman12" target="_blank" class="btn btn-dark"><i class="fab fa-github me-1"></i> GitHub</a>
+<a href="resume.pdf" download class="btn btn-warning"><i class="fas fa-download me-1"></i> Download CV</a>
+</div>
+</div>
+<div class="col-lg-6 text-center">
+<img src="lol.jpg" class="img-fluid rounded-circle border border-info" style="max-width:300px;position:relative;z-index:1" alt="profile">
+</div>
+</div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="container py-5 text-center">
-  <h2 class="mb-4">About Me</h2>
-  <p class="about-text">
-    Full Stack Web Developer with 2 years experience building modern web applications using PHP,Smarty,React, JavaScript, and Bootstrap. Graduate from Suez Canal University – Ismailia.
-  </p>
+<section id="about" class="section">
+<div class="container">
+<h2 class="text-center mb-5">About Me</h2>
+<p class="text-center w-75 mx-auto">I am a Full Stack Developer with two years of experience building professional and visually stunning web applications. I focus on performance, responsive design, and creating unique digital experiences that stand out.</p>
+</div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-5">Skills</h2>
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-      <div class="skills-circle" style="background:#ff6b6b;">HTML</div>
-      <div class="skills-circle" style="background:#f7b731;">CSS</div>
-      <div class="skills-circle" style="background:#1dd1a1;">JavaScript</div>
-      <div class="skills-circle" style="background:#54a0ff;">React</div>
-      <div class="skills-circle" style="background:#5f27cd;">Bootstrap</div>
-      <div class="skills-circle" style="background:#10ac84;">PHP</div>
-      <div class="skills-circle" style="background:#576574;">Smarty</div>
-    </div>
-  </div>
+<section id="skills" class="section">
+<div class="container">
+<h2 class="text-center mb-5">Professional Skills</h2>
+<div class="row g-4">
+<div class="col-lg-6">
+<div class="p-4 rounded" style="background:#111;border:1px solid #222">
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-html5 me-2 text-info"></i>HTML</span><span>95%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="95%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fas fa-cogs me-2 text-info"></i>Smarty</span><span>95%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="90%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-css3-alt me-2 text-info"></i>CSS</span><span>90%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="90%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-bootstrap me-2 text-info"></i>Bootstrap</span><span>90%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="90%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-js me-2 text-info"></i>JavaScript</span><span>80%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="80%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-react me-2 text-info"></i>React</span><span>75%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="75%"></div></div>
+
+</div>
+</div>
+<div class="col-lg-6">
+<div class="p-4 rounded" style="background:#111;border:1px solid #222">
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-php me-2 text-info"></i>PHP</span><span>85%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="85%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-node-js me-2 text-info"></i>Node.js</span><span>70%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="70%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fas fa-database me-2 text-info"></i>MySQL</span><span>85%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="85%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fas fa-leaf me-2 text-info"></i>MongoDB</span><span>70%</span></div>
+<div class="progress mb-3"><div class="progress-bar bg-info skill-bar" data-width="70%"></div></div>
+<div class="d-flex justify-content-between mb-1"><span><i class="fab fa-git-alt me-2 text-info"></i>Git / GitHub</span><span>80%</span></div>
+<div class="progress"><div class="progress-bar bg-info skill-bar" data-width="80%"></div></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+const skillBars=document.querySelectorAll('.skill-bar');
+skillBars.forEach(bar=>{bar.style.width='0'});
+const skillObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const bar=entry.target;bar.style.width=bar.dataset.width;bar.style.transition='width 2s ease'}})});
+skillBars.forEach(bar=>skillObserver.observe(bar));
+</script>
+
+<section id="projects" class="section">
+<div class="container">
+<h2 class="text-center mb-5">Projects</h2>
+<div class="row g-4">
+<div class="col-md-4"><div class="card p-3"><img src="project1.jpg" class="img-fluid mb-3"><h5>Project Title</h5><p>Project description will be added later.</p><a href="#" class="btn btn-outline-info btn-sm">GitHub</a></div></div>
+<div class="col-md-4"><div class="card p-3"><img src="project2.jpg" class="img-fluid mb-3"><h5>Project Title</h5><p>Project description will be added later.</p><a href="#" class="btn btn-outline-info btn-sm">GitHub</a></div></div>
+<div class="col-md-4"><div class="card p-3"><img src="project3.jpg" class="img-fluid mb-3"><h5>Project Title</h5><p>Project description will be added later.</p><a href="#" class="btn btn-outline-info btn-sm">GitHub</a></div></div>
+</div>
+</div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="py-5 text-center">
-  <div class="container">
-    <h2 class="mb-5">Projects</h2>
-    <div class="d-flex flex-wrap justify-content-center gap-4">
-      <div class="project-circle">
-        <a href="https://github.com/yourusername" target="_blank">
-          <img src="https://via.placeholder.com/180" alt="Project 1">
-        </a>
-      </div>
-      <div class="project-circle">
-        <a href="https://github.com/yourusername" target="_blank">
-          <img src="https://via.placeholder.com/180" alt="Project 2">
-        </a>
-      </div>
-      <div class="project-circle">
-        <a href="https://github.com/yourusername" target="_blank">
-          <img src="https://via.placeholder.com/180" alt="Project 3">
-        </a>
-      </div>
-    </div>
-  </div>
+<section id="contact" class="section">
+<div class="container text-center">
+<h2 class="mb-4">Contact Me</h2>
+<p>Email: loloshoman111@email.com | Phone: 01090557014</p>
+<div class="d-flex justify-content-center mt-4">
+  <a href="https://github.com/alaashoman12" target="_blank" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
+  <a href="https://linkedin.com/in/alaashoman12" target="_blank" class="text-white me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+  <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="text-white"><i class="fab fa-whatsapp fa-2x"></i></a>
+</div>
+</div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="bg-dark text-white py-5 text-center">
-  <h2>Contact Me</h2>
-  <p>Email: loloshoman111@email.com | Phone: 01090557014</p>
-  <div class="social-icons">
-    <a href="https://github.com/yourusername" class="text-white me-3"><i class="fab fa-github fa-2x"></i></a>
-    <a href="https://linkedin.com/in/yourusername" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center p-3">
-© 2026 Alaa Hamada
-</footer>
+<div class="footer">
+<p>© 2026 Alaa Shoman - Full Stack Developer</p>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS('particles-js',{
+  "particles":{
+    "number":{"value":80},
+    "color":{"value":"#0ff"},
+    "shape":{"type":"circle"},
+    "opacity":{"value":0.5},
+    "size":{"value":3},
+    "line_linked":{"enable":true,"distance":150,"color":"#0ff","opacity":0.4,"width":1},
+    "move":{"enable":true,"speed":2}
+  }
+});
+</script>
 </body>
 </html>
